@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agrinho Tech 🌱 | Tecnologias no Campo</title>
+  <meta name="description" content="Site educativo e interativo do Agrinho sobre tecnologias no campo: drones, sensores, robôs, jogos e quiz!" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌱</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar">
+    <div class="container nav-content">
+      <a href="#inicio" class="logo">🌱 Agrinho<span>Tech</span></a>
+      <button id="menu-btn" aria-label="Abrir menu">☰</button>
+      <nav id="menu">
+        <a href="#inicio">Início</a>
+        <a href="#tecnologias">Tecnologias</a>
+        <a href="#hortinha">Hortinha</a>
+        <a href="#jogo">Jogo</a>
+        <a href="#quiz">Quiz</a>
+        <a href="#curiosidades">Curiosidades</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ===== HERO ===== -->
+  <section id="inicio" class="hero">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1>Tecnologia no campo é <span class="destaque">divertida</span>! 🚜</h1>
+        <p>Vem com o Agrinho descobrir como drones, sensores e robôs ajudam a produzir alimentos cuidando da natureza! 💚</p>
+        <div class="hero-buttons">
+          <a href="#tecnologias" class="btn btn-verde">Explorar 🚀</a>
+          <a href="#jogo" class="btn btn-amarelo">Jogar 🎮</a>
+        </div>
+      </div>
+      <div class="hero-img">
+        <img src="img/hero.png" alt="Fazenda tecnológica com trator com GPS, drone, sensores e criança acenando" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TECNOLOGIAS ===== -->
+  <section id="tecnologias">
+    <div class="container">
+      <h2 class="titulo-secao reveal">🤖 Tecnologias que ajudam o campo</h2>
+      <p class="subtitulo-secao reveal">Conheça os heróis tecnológicos da fazenda moderna!</p>
+      <div class="grade">
+        <article class="card reveal">
+          <img src="img/drone.png" alt="Drone agrícola pulverizando a plantação" />
+          <h3>🚁 Drone Agricultor</h3>
+          <p>Voando sobre a lavoura, ele tira fotos, descobre quais plantas precisam de ajuda e até borrifa água na medida certa!</p>
+        </article>
+        <article class="card reveal">
+          <img src="img/sensores.png" alt="Sensores inteligentes no solo enviando dados para um tablet" />
+          <h3>📡 Sensores Inteligentes</h3>
+          <p>Fincados no solo, medem a umidade e os nutrientes e mandam tudo pelo Wi-Fi direto para o tablet do produtor!</p>
+        </article>
+        <article class="card reveal">
+          <img src="img/robo.png" alt="Robô simpático colhendo tomates com energia solar" />
+          <h3>🤖 Robô Colhedor</h3>
+          <p>Colhe frutas e verduras com todo o cuidado, sem machucar as plantas — e ainda funciona com energia solar!</p>
+        </article>
+        <article class="card reveal">
+          <div class="emoji-grande">🚜</div>
+          <h3>Trator com GPS</h3>
+          <p>Ele anda sozinho seguindo a linha da plantação com precisão de centímetros. Nada de desperdício!</p>
+        </article>
+        <article class="card reveal">
+          <div class="emoji-grande">🛰️</div>
+          <h3>Satélite Espião do Bem</h3>
+          <p>Lá do espaço, ele fotografa a fazenda e mostra no computador se a plantação está saudável.</p>
+        </article>
+        <article class="card reveal">
+          <div class="emoji-grande">🧠</div>
+          <h3>Inteligência Artificial</h3>
+          <p>Um computador esperto que aprende a reconhecer pragas e doenças antes de virarem problema!</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HORTINHA VIRTUAL ===== -->
+  <section id="hortinha">
+    <div class="container">
+      <h2 class="titulo-secao reveal">🌻 Hortinha Virtual</h2>
+      <p class="subtitulo-secao reveal">Cuide da plantinha na ordem certa: plantar, regar, sol e colheita!</p>
+      <div class="horta reveal">
+        <div class="horta-flutua"><span id="horta-emoji">🟫</span></div>
+        <p id="horta-msg"></p>
+        <div class="horta-acoes">
+          <button class="btn btn-amarelo" data-acao="plantar">🌰 Plantar</button>
+          <button class="btn btn-verde" data-acao="regar">💧 Regar</button>
+          <button class="btn btn-amarelo" data-acao="sol">☀️ Sol</button>
+          <button class="btn btn-verde" data-acao="colher">🧺 Colher</button>
+        </div>
+        <p id="horta-placar" class="placar-horta">🧺 Colheitas: 0</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== JOGO DA MEMÓRIA ===== -->
+  <section id="jogo">
+    <div class="container">
+      <h2 class="titulo-secao reveal">🎮 Jogo da Memória do Campo</h2>
+      <p class="subtitulo-secao reveal">Encontre todos os pares da fazenda tecnológica!</p>
+      <div class="memoria-painel reveal">
+        <span class="placar" id="mem-mov">Movimentos: 0</span>
+        <span class="placar" id="mem-pares">Pares: 0/6</span>
+        <button class="btn btn-verde" id="mem-reiniciar">🔄 Recomeçar</button>
+      </div>
+      <div id="memoria-grid" class="reveal"></div>
+      <p id="mem-msg"></p>
+    </div>
+  </section>
+
+  <!-- ===== QUIZ ===== -->
+  <section id="quiz">
+    <div class="container">
+      <h2 class="titulo-secao reveal">❓ Quiz Agrinho Tech</h2>
+      <p class="subtitulo-secao reveal">Mostre o que você aprendeu sobre o campo tecnológico!</p>
+      <div class="quiz-caixa reveal">
+        <p id="quiz-progresso" class="quiz-progresso"></p>
+        <h3 id="quiz-pergunta"></h3>
+        <div id="quiz-opcoes" class="quiz-opcoes"></div>
+        <p id="quiz-feedback"></p>
+        <button id="quiz-proxima" class="btn btn-verde escondido">Próxima ➡️</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CURIOSIDADES ===== -->
+  <section id="curiosidades">
+    <div class="container">
+      <h2 class="titulo-secao reveal">🤩 Curiosidades do campo tech</h2>
+      <p class="subtitulo-secao reveal">Você sabia?</p>
+      <div class="grade">
+        <article class="card card-amarelo reveal">
+          <div class="emoji-grande">💧</div>
+          <h3>Gota a gota</h3>
+          <p>A irrigação por gotejamento leva água direto na raiz da planta e pode economizar até 60% de água!</p>
+        </article>
+        <article class="card card-amarelo reveal">
+          <div class="emoji-grande">🗺️</div>
+          <h3>Mapa do tesouro</h3>
+          <p>Com imagens de satélite, o produtor vê no mapa quais pedacinhos do campo precisam de mais cuidado.</p>
+        </article>
+        <article class="card card-amarelo reveal">
+          <div class="emoji-grande">🐝</div>
+          <h3>Ajudantes da natureza</h3>
+          <p>Tecnologia e natureza trabalham juntas: proteger abelhas e minhocas também é tecnologia do bem!</p>
+        </article>
+        <article class="card card-amarelo reveal">
+          <div class="emoji-grande">🌍</div>
+          <h3>Campo que cuida</h3>
+          <p>A agricultura de precisão usa dados para gastar só o necessário — assim o planeta agradece!</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Feito com 💚 para o <strong>Programa Agrinho</strong> • Tema: Tecnologias no Campo</p>
+    <p>Projeto educativo • Imagens ilustrativas geradas por IA • 2026</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
